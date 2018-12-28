@@ -175,8 +175,9 @@ def main():
     #Optional args
     if args.printout:
         print_model()
-    for i in range(args.generate):
-        generate()
+    if args.generate:
+        for i in range(args.generate):
+            generate()
     if args.save:
         save(args.save)
 
